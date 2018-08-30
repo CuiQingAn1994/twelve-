@@ -1,0 +1,177 @@
+section{
+	width:100%;
+	height:100vh;
+	overflow: hidden;
+	background-image: url(../img/bg.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: none;
+}
+.close,.fpage,.title,.fixbox,.box,.spage,.s_top,.an_title,.lucky,.lott,.lottbox,.paybox,.paymsg,.choose,.exit{
+	position: absolute;
+}
+.fpage{
+	width:18.96rem;
+	height:100vh;
+	/*left:4.89rem;*/
+	left:50%;
+	transform: translateX(-50%);
+	overflow: hidden;
+}
+.title{
+	width:18.96rem;
+	/*left:4.89rem;*/
+	top:1.76rem;
+	left:50%;
+	transform: translateX(-50%);
+	display: none;
+}
+.timg{
+	margin:0 auto;
+	display: block;
+}
+.fixbox{
+	width:18.96rem;
+	height:5.72rem;
+	top:4.01rem;
+	left:50%;
+	transform: translateX(-50%);
+}
+.box{
+	width:18.96rem;
+	height:5.72rem;
+	top:0rem;
+	left:50%;
+	transform: translateX(-50%); 
+}
+.outBox{
+	width:3.16rem;
+	height:2.86rem;
+	float: left;
+	transition: 0.2s;
+}
+.con{
+	margin:0.36rem 0.52rem;
+	transition: 0.2s;
+	display: none;
+
+}
+
+.spage{
+	width:0rem;
+	left:50%;
+	transform: translateX(-50%);
+	overflow: hidden; 
+	height:100vh;
+}
+.s_top{
+	top:1.21rem;
+	left:50%;
+	transform: translateX(-50%);
+}
+
+
+.an_title,.lucky{
+	width:1387px;
+	text-align: center;
+	top:392px;
+	left:50%;
+	transform: translateX(-50%);
+	font-size: 30px;
+	color:#fff;
+}
+.lucky{
+	top:462px;
+}
+.luck_num{
+	color:#DE21F4;
+	font-size: 34px;
+	font-weight: bold;
+}
+.lottbox{
+	width:1387px;
+	height:167px;
+	top:555px;
+	left:50%;
+	transform: translateX(-50%);
+}
+.lott{
+	width:400px;
+	height:160px;
+	left:243.5px;
+	top:0;
+	font-size: 24px;
+	color:#fff;
+	background-image: url('../img/彩票bg.png');
+}
+.lott2{
+	left:743.5px;
+}
+.lott_name{
+	padding:25px 0 15px 35px;
+
+}
+.lott_num{
+	padding-left:52px;
+}
+.choose{
+	bottom:16px;
+	right:98px;
+	display: none;
+}
+.paybox{
+	width:1387px;
+	top:793px;
+	left:50%;
+	font-size: 24px;
+	color:#fff;
+	transform: translateX(-50%);
+}
+.paymsg{
+	right:243.5px;
+}
+.paytop{
+	line-height: 50px;
+	margin-right: 30px;
+}
+.paynum{
+	color:#DE21F4;
+}
+.payprice{
+	color:#DE21F4;
+}
+.pay{
+	display: inline-block;
+	width:130px;
+	height:50px;
+	background:#DE21F4;
+	border-radius: 25px;
+	text-align: center;
+	line-height: 50px;
+}
+.close,.exit{
+	right:52px;
+	top:62px;
+	display: none;
+}
+
+
+.toast{
+	position: fixed;
+	padding:20px 50px;
+	font-size: 24px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	background: rgba(0,0,0,.6);
+	border-radius: 100px;
+	color:#fff;
+	display: none;
+}
+
+
+
+.show{
+	display: block;
+}
