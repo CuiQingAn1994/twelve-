@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>顶呱刮演示</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-title" content="顶呱刮演示">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit" />
+    <!-- <link rel="stylesheet" href="./lib/reset.css" />
+    <link rel="stylesheet" href="./lib/weui.css" />
+    <link rel="stylesheet" href="./lib/toastr.min.css" />
+    <link rel="stylesheet" href="./lib/animate.css" /> -->
+    <style>
+        html,body{
+            background:red;
+            /*background: -webkit-linear-gradient(left top, #F2CB87 , #EA8D4C); 
+            background: -o-linear-gradient(bottom right, #F2CB87, #EA8D4C);
+            background: -moz-linear-gradient(bottom right, #F2CB87, #EA8D4C);
+            background: linear-gradient(to bottom right, #F2CB87 , #EA8D4C);*/
+        }
+        ._flex{
+            display: flex;
+        }
+        ._flex-1{
+            flex: 1;
+        }
+        .delete{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            color: white;
+        }
+        #delete_icon{
+            display: block;
+            font-size: 40px;
+        }
+    </style>
+    <!-- <script src="http://weinre.hcb66.com:8080/target/target-script-min.js#anonymous"></script> -->
+</head>
+
+<body>
+    <div style="text-align: center;font-size:30px;color:#fff;line-height: 50px;padding:20px 0px;position: relative;">
+        顶呱刮试刮游戏
+        <b style="display:block;font-size:20px;">点击票面试刮</b>
+        <div class="delete"><img src="./images/delete.png" alt="" id="delete_icon"></div>
+    </div>
+    <div class="_flex">
+        <div class="_flex-1" style="text-align: center;">
+            <iframe src="http://zhuanti.lottery.gov.cn/yxsg/tcsgty50/index.html" style="width:525px;height:720px;margin:0 auto;border:0;"></iframe>
+            <div style="color:#fff;line-height: 50px;padding: 0;font-size: 20px;">
+                本游戏为在线模拟试刮体验
+                <b><br/>不产生真实奖金，中奖概率与真实彩票不同</b>
+            </div>
+       </div>
+       <div class="_flex-1" style="text-align: center;">
+            <iframe src="http://zhuanti.lottery.gov.cn/yxsg/tcsgty51/index.html" style="width:545px;height:850px;margin:0 auto;border:0;"></iframe>
+       </div>
+       <div class="_flex-1" style="text-align: center;">
+            <iframe src="http://zhuanti.lottery.gov.cn/yxsg/tcsgty52/index.html" style="width:425px;height:850px;margin:0 auto;border:0;"></iframe>
+       </div>
+    </div>
+    <script>
+        var oDiv = document.getElementById('delete_icon');   //获取元素div
+        oDiv.onclick=function(){
+            window.hcbWeb.close();
+            // console.log(123)
+        } 
+    </script>
+    
+</body>
+
+</html>
