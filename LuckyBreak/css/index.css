@@ -1,0 +1,238 @@
+
+.all{
+    width:19.20rem;
+    height:10.80rem;
+    background-color: #fff;
+    background-image:url('../img/背景.jpg');
+    background-size: cover;
+    position: absolute;
+    opacity: 0.5;
+    animation: scale 1s 0s forwards;
+
+}
+.c4d,.a_paizi,.b_paizi,.paizi,.fan,.dian,.star,.dec,.start,.introBox,.intro,.text,.buy,.exit{
+    position: absolute;
+    background-repeat: no-repeat;
+}
+.c4d{
+    width:16.25rem;
+    height:9.68rem;
+    top:0.39rem;
+    left:1.1rem;
+    background-image: url('../img/c4d.png');
+    background-size: cover;
+    /*transform: scale(5,5);*/
+
+}
+.a_paizi{
+    width:12.67rem;
+    height:3.49rem;
+    background-image: url('../img/翻牌子大.png');
+    background-size: cover;
+    top:3.73rem;
+    left:3.26rem;
+}
+.b_paizi{
+    width:12.67rem;
+    height:3.49rem;
+    background-image: url('../img/牌子.png');
+    background-size: cover;
+    top:3.73rem;
+    left:3.26rem;
+}
+.paizi{
+    animation: change 0.8s 6s infinite linear;
+    width:13.22rem;
+    height:2.96rem;
+    top:0.49rem;
+    left:-0.27rem;
+    opacity: 0;
+    background-image: url('../img/牌子2.png');
+    background-size: cover;
+}
+.fan{
+    width:2.79rem;
+    height:2.42rem;
+    left:4.94rem;
+    top:0.49rem;
+    background-image: url('../img/翻1.png');
+    animation: rotation 0.5s 1.5s 8 linear;
+    background-size: cover;
+}
+.dian{
+    width:7.67rem;
+    height:1.18rem;
+    background-image: url('../img/点.png');
+    left:5.72rem;
+    bottom:-1.18rem;
+    opacity: 0;
+    animation: moveb 0.5s 1.5s linear forwards;
+    background-size: cover;
+}
+.dec{
+    width:15.61rem;
+    height:10.07rem;
+    left:2.54rem;
+    top:-1.65rem;
+    opacity: 0;
+    background-image: url('../img/点缀.png');
+    animation: movet 0.5s 3s linear forwards;
+    background-size: cover;
+}
+.star{
+    width:10.96rem;
+    height:9.15rem;
+    left:4.01rem;
+    bottom:0;
+    background-image: url('../img/星星.png');
+    animation: change 0.5s 4s linear forwards;
+    opacity: 0;
+    background-size: cover;
+
+}
+.start{
+    width:2.97rem;
+    height:2.09rem;
+    left:8.04rem;
+    top:8.71rem;
+    opacity: 1;
+    transform: scale(1,1);
+    background-image:url('../img/现在开始.png');
+    animation: shake 0.8s 6s infinite linear;
+    background-size: cover;
+}
+.introBox{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.6);
+    display: none;
+}
+.intro{
+    background-image: url('../img/组2.png');
+    width:6.97rem;
+    height:9.80rem;
+    left:6.11rem;
+    top:0.69rem;
+    background-size: cover;
+}
+.text{
+    width:3.78rem;
+    height:5.03rem;
+    left:1.53rem;
+    top:1.30rem;
+    background-image: url('../img/字字.png');
+    opacity: 0;
+    background-size: cover;
+}
+.buy{
+    width:1.76rem;
+    height:0.52rem;
+    left:2.53rem;
+    top:7.40rem;
+    background-image: url('../img/立即购买.png');
+    opacity: 0;
+    background-size: cover;
+}
+.exit{
+    width:0.75rem;
+    height:0.75rem;
+    background-image: url('../img/退出.png');
+    top:0.50rem;
+    right:0.62rem;
+    background-size: cover;
+}
+/*自定义动画*/
+@keyframes scale{
+    from{opacity:0;transform: scale(100,100); }
+    to{opacity:1;transform: scale(1,1)}
+}
+@keyframes change{
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@keyframes rotation{
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+@keyframes moveb{
+    from{opacity: 0;bottom:-1.65rem;}
+    to{opacity: 1;bottom:1.01rem;}
+}
+@keyframes movet{
+    from{opacity: 0;top:-1.18rem;}
+    to{opacity: 1;top:0rem;}
+}
+@keyframes shake{
+    from{opacity: 1;transform: scale(1,1);}
+    from{opacity: 0.6;transform: scale(1.06,1.06);}
+}
+
+
+/*第一页*/
+.fpage{
+    display: none;
+}
+.qrcode{
+    width:200px;
+    height:200px;
+    background: skyblue;
+}
+
+/*第二页*/
+.spage{
+    /*display: none;*/
+    height:2000px;
+	position: relative;
+    display: none;
+}
+.box{
+	width:280px;
+	height:280px;
+	/*background:red;*/
+	position: absolute;
+	top:320px;
+	left:1600px;
+	transition-timing-function: linear;
+	transform-style: preserve-3d;
+	transition: 0.5s; 
+}
+
+.back{
+	width:100%;
+	height:100%;
+    position: absolute; 
+    top: 0; 
+    background: #fff; 
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.front{ 
+	width:100%;
+	height:100%;
+	position: absolute; 
+    top: 0; 
+    background: yellow;
+    backface-visibility: hidden;
+}
+.window{
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	height:100vh;
+	background:rgba(0,0,0,.4);
+	display: none;
+	z-index: 1;
+
+}
+.big{
+	width:600px;
+	height:600px;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	background:#fff;
+
+}
