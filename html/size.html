@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<title></title>
+	<style type="text/css">
+		.dp{
+			width:calc(10px - 1pt);
+			height:60pt;
+			border:1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="dp">1213123</div>
+</body>
+</html>
+<script type="text/javascript">
+	//垮浏览器取得页面视口的大小
+	var pageWidth = window.innerWidth, pageHeight = window.innerHeight;
+	if(typeof pageWidth != "number"){
+		if(document.compactMode == "CSS1Compat"){
+			pageWidth = document.documentElement.clientWidth;
+			pageHeight = document.documentElement.clientHeight;
+		}else{
+			pageWidth = document.body.clientWidth;
+			pageHeight = document.body.clientHeight;
+		}
+	}
+	alert("浏览器宽："+pageWidth+"px"+"浏览器高："+pageHeight+"px")
+	alert("dpr:"+window.devicePixelRatio);
+
+
+	// var fun = function (doc, win) {
+	//     var docEl = doc.documentElement,
+	//         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	//         recalc = function () {
+	//             var clientWidth = docEl.clientWidth;
+	//             if (!clientWidth) return;
+
+	//             //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+	//             //可以根据实际需要修改
+	//             docEl.style.fontSize = 20 * (clientWidth / 640) + 'px';
+	//         };
+	//     if (!doc.addEventListener) return;
+	//     win.addEventListener(resizeEvt, recalc, false);
+	//     doc.addEventListener('DOMContentLoaded', recalc, false);
+	// }
+	// fun(document, window);
+</script>

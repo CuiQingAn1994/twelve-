@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+		section{
+			width:100%;
+			height:100%;
+			padding:30px;
+			font-size: 16px;
+		}
+		.line{
+			height:40px;
+			line-height: 40px;
+		}
+		.co_cr{
+			color:#999;
+		}
+		.rel{
+			margin:30px 0;
+		}
+		.form{
+			overflow: hidden;
+		}
+		.control-label{
+			line-height: 34px;
+		}
+		.form-group{
+			overflow: hidden;
+		}
+		.out_box{
+			width:100%;
+			height:100%;
+			top:0;
+			left:0;
+			right:0;
+			bottom: 0;
+			background: rgba(0,0,0,.3);
+			position: fixed;
+			display: none;
+			opacity: 0;
+
+		}
+		.in_box{
+			width:450px;
+			height:250px;
+			padding:0px 25px 0 25px;
+			background: #fff;
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+		}
+		.ts{
+			text-align: center;
+			line-height: 50px;
+		}
+		.ll{
+			line-height: 50px;
+		}
+		.cn{
+			font-size: 18px;
+			color:red;
+		}
+		.l2{
+			margin-bottom:30px;
+		}
+	</style>
+	<title></title>
+	<section>
+		<div class="line1 line">
+			<span class="tl">当前经销商：</span>
+			<span class="con">当前经销商</span>
+		</div>
+		<div class="line2 line">
+			<span class="tl">经销商级别：</span>
+			<span class="con">总代理</span>
+		</div>
+		<div class="line3 line">
+			<span class="tl">所得分润比例：</span>
+			<span class="con">1.0％</span>
+		</div>
+		<div class="line4 line">
+			<span class="tl">当前彩票分润比例：</span>
+			<span class="con co_cr">1.0%｜2.0%｜3.0%</span>
+		</div>
+		<div class="rel">修改分润比例：</div>
+		<div class="form">
+		  	<div class="form-group">
+			    <label for="" class="col-sm-2 control-label">总代理：</label>
+			    <div class="col-sm-6">
+			      <input type="number" class="form-control" id="" placeholder="">
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="" class="col-sm-2 control-label">代理商：</label>
+			    <div class="col-sm-6">
+			      <input type="number" class="form-control" id="" placeholder="">
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="" class="col-sm-2 control-label">商户：</label>
+			    <div class="col-sm-6">
+			      <input type="number" class="form-control" id="" placeholder="">
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="" class="col-sm-2 control-label">生效时间：</label>
+			    <div class="col-sm-6">
+			      <input type="date" class="form-control" id="" placeholder="">
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="" class="col-sm-2 control-label">签约合同：</label>
+			    <div class="col-sm-6">
+			      <input type="text" class="form-control" id="" placeholder="输入合同编号，并上传电子文件和编号">
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="" class="col-sm-2 control-label"></label>
+			    <div class="col-sm-5">
+			      <input type="file" class="form-control" id="" multiple="multiple" placeholder="">
+			    </div>
+			</div>
+			<div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-2">
+			      <button id="sure" class="btn btn-default">确定修改</button>
+			    </div>
+			    <div class="col-sm-offset-2 col-sm-2">
+			      <button id="cancal" class="btn btn-default">取消返回</button>
+			    </div>
+			</div>
+
+		</div>
+		<div class="out_box" id="model">
+			<div class="in_box">
+				<div class="ts">提示</div>
+				<div class="l1 ll">
+					<span class="lt">修改后当前经销商所得比例为：</span>
+					<span class="cn">1.0%</span>
+				</div>
+				<div class="l2 ll">
+					<span class="lt">整体分润比例为：</span>
+					<span class="cn">1.0%｜2.0%｜3.0%</span>
+				</div>
+				<div class="col-sm-offset-2 col-sm-4">
+			      <button type="submit" id="sub" class="btn btn-default">&nbsp;&nbsp;&nbsp;&nbsp;确定&nbsp;&nbsp;&nbsp;&nbsp;</button>
+			    </div>
+			    <div class="col-sm-offset-2 col-sm-4">
+			      <button id="back" class="btn btn-default">&nbsp;&nbsp;&nbsp;&nbsp;取消&nbsp;&nbsp;&nbsp;&nbsp;</button>
+			    </div>
+			</div>
+		</div>
+	</section>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$('#sure').click(res=>{
+		$('#model').css({display:'block'})
+		$('#model').animate({
+			opacity:1
+		})
+	})
+	$('#cancal').click(res=>{
+		alert('退出表单')
+	})
+	$('#back').click(res=>{
+		alert('返回表单')
+		$('#model').css({display:'none'})
+		$('#model').animate({
+			opacity:0
+		})
+
+	})
+	$('#sub').click(res=>{
+		alert('提交吧，骚年')
+	})
+</script>
+</body>
+</html>

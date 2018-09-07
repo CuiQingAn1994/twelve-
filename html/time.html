@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="aqi-list"></div>
+	<script type="text/javascript">
+		var start=1527782400000;
+		var end = 1530113522000;
+		aqiList = document.getElementById("aqi-list")
+		function zhuan(input) {
+		    var d = new Date(input);
+		    var year = d.getFullYear();
+		    var month = (d.getMonth() + 1)<10 ? '0' + (d.getMonth() + 1) : '' + (d.getMonth() + 1);
+		    var day = d.getDate() <10 ? '0' + d.getDate() : '' + d.getDate();
+		    var hour = d.getHours()<10? '0' + d.getHours() : '' + d.getHours();
+		    var minutes = d.getMinutes() <10 ? '0' + d.getMinutes() : '' + d.getMinutes();
+		    var seconds = d.getSeconds()<10 ? '0' + d.getSeconds() : '' + d.getSeconds();
+		    var newLi = document.createElement("p");
+                    newLi.innerHTML = year+ '.' + month + '.' + day + ' ' + hour + ':' + minutes+':'+seconds;
+            aqiList.append(newLi);
+		   console.log( year+ '.' + month + '.' + day + ' ' + hour + ':' + minutes+':'+seconds)
+		 }
+		 for(var i = start;i<end;i+=555555){
+		 	zhuan(i)
+		 }
+	</script>
+</body>
+</html>

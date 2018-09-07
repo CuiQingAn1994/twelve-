@@ -4,13 +4,14 @@
     height:10.80rem;
     background-color: #fff;
     background-image:url('../img/背景.jpg');
-    background-size: cover;
+    background-size: contain;
     position: absolute;
     opacity: 0.5;
     animation: scale 1s 0s forwards;
+    background-repeat: repeat-y;
 
 }
-.c4d,.a_paizi,.b_paizi,.paizi,.fan,.dian,.star,.dec,.start,.introBox,.intro,.text,.buy,.exit{
+.c4d,.a_paizi,.b_paizi,.paizi,.fan,.dian,.star,.dec,.start,.introBox,.intro,.text,.buy,.exit,.ques,.true,.false{
     position: absolute;
     background-repeat: no-repeat;
 }
@@ -64,9 +65,9 @@
     height:1.18rem;
     background-image: url('../img/点.png');
     left:5.72rem;
-    bottom:-1.18rem;
+    top:8.61rem;
     opacity: 0;
-    animation: moveb 0.5s 1.5s linear forwards;
+    animation: moveb 1s 1.5s linear forwards;
     background-size: cover;
 }
 .dec{
@@ -169,29 +170,33 @@
 
 
 /*第一页*/
-.fpage{
+/*.fpage{
     display: none;
 }
 .qrcode{
     width:200px;
     height:200px;
     background: skyblue;
-}
+}*/
 
 /*第二页*/
 .spage{
     /*display: none;*/
-    height:2000px;
-	position: relative;
+    width:17.23rem;
+    height:17.07rem;
+	position: absolute;
     display: none;
+    top:3.78rem;
+    left:0.99rem;
+    /*background-image: url('../img/背景.jpg');*/
 }
 .box{
-	width:280px;
-	height:280px;
+	width:2.37rem;
+	height:3.23rem;
 	/*background:red;*/
 	position: absolute;
-	top:320px;
-	left:1600px;
+	top:3.43rem;
+	left:14.84rem;
 	transition-timing-function: linear;
 	transform-style: preserve-3d;
 	transition: 0.5s; 
@@ -202,37 +207,118 @@
 	height:100%;
     position: absolute; 
     top: 0; 
-    background: #fff; 
+    /*background: #fff; */
     transform: rotateY(180deg);
     backface-visibility: hidden;
+}
+.qr{
+    position: absolute;
+    width:0.65rem;
+    height:0.65rem;
+    left:0.85rem;
+    top:1.87rem;
+
 }
 .front{ 
 	width:100%;
 	height:100%;
 	position: absolute; 
     top: 0; 
-    background: yellow;
+    /*background: yellow;*/
     backface-visibility: hidden;
+    background-size: cover;    
 }
 .window{
 	position: fixed;
 	top:0;
 	left:0;
-	right:0;
-	bottom:0;
-	height:100vh;
+    width:19.20rem;
+	height:10.80rem;
 	background:rgba(0,0,0,.4);
 	display: none;
 	z-index: 1;
 
 }
 .big{
-	width:600px;
-	height:600px;
+	width:5.29rem;
+	height:7.22rem;
 	position: absolute;
 	left:50%;
 	top:50%;
 	transform: translate(-50%,-50%);
-	background:#fff;
+	/*background:#fff;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.qrbig{
+    width:1.47rem;
+    height:1.47rem;
+    position: absolute;
+    top:4.21rem;
+    left:1.92rem;
+}
 
+
+
+
+
+.ew{
+    position: fixed;
+    top:0;
+    left:0;
+    width:19.20rem;
+    height:10.80rem;
+    background:rgba(0,0,0,.4);
+    display: none;
+    z-index:2;    
+}
+.se{
+    position: absolute;
+    width:7.45rem;
+    height:3.38rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-image: url('../img/退出底.png');
+    background-size: cover;
+
+}
+.ques{
+    width:3.09rem;
+    height:0.42rem;
+    left:2.19rem;
+    top:0.96rem;
+    background-image: url('../img/是否.png');
+    background-size: cover;
+}
+.true{
+    width:1.76rem;
+    height:0.52rem;
+    left:4.26rem;
+    top:2.03rem;
+    background-image: url('../img/留下继续.png');
+    background-size: cover;
+}
+.false{
+    width:1.76rem;
+    height:0.52rem;
+    left:1.44rem;
+    top:2.03rem;
+    background-image: url('../img/立即退出.png');
+    background-size: cover;
+
+}
+
+
+.toast{
+    position: fixed;
+    padding:20px 50px;
+    font-size: 24px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background: rgba(0,0,0,.6);
+    border-radius: 100px;
+    color:#fff;
+    display: none;
 }

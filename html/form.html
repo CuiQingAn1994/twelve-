@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+		.step1,.step2{
+			padding:0 20px;
+		}
+		.box{
+			height:40px;
+			/*padding-left:20px;*/
+		}
+		.choose,.choose1{
+			overflow: hidden;
+		}
+		.choose1{
+			padding-top:10px;
+			/*padding-left:20px;*/
+		}
+		.l_title{
+			font-weight: normal;
+			text-align: right;
+
+		}
+		.z_title,.d_title,.any_title{
+			width:122px;
+			float: left;
+			line-height: 34px;
+			text-align: right;
+			font-weight: normal;
+			
+		}
+		.z_all,.d_all,.any_all{
+			float: left;
+			width:150px;
+			margin-left:20px;
+		}
+		.name{
+			width:300px;
+		}
+		.hide{
+			display: none;
+		}
+		.show{
+			display: block;
+		}
+		.s_box{
+			display: inline-block;
+			padding:5px;
+		}
+		.phoneNum{
+			padding-bottom:50px;
+			border-bottom:10px solid #e0e0e0;
+			margin-bottom:50px;
+		}
+		.btn_s1{
+			width:764px;
+			height:41px;
+			padding:50px 0 50px 264px;
+		}
+		.btn1,.btn2,.btn3{
+			width:200px;
+			height:40px;
+			line-height: 40px;
+			text-align: center;
+			font-size: 14px;
+			color:#fff;
+			border-radius: 3px;
+			background: #00A9F4;
+		}
+		.btn2,.btn3{
+			float: left;
+			margin-right:40px;
+		}
+		.any_title2{
+			width:150px;
+			float: left;
+			line-height: 34px;
+			text-align: right;
+			font-weight: normal;
+		}
+		.btn_s2{
+			overflow: hidden;
+			width:764px;
+			height:141px;
+			padding:50px 0 50px 264px;
+		}
+	</style>
+</head>
+<body>
+	<div class="step1">
+		<h4>基本信息:</h4>
+		<div class="radio">
+			<label class="l_title">选择经销商级别：</label>
+			<label class="radio-inline">
+			  <input type="radio" name="inlineRadioOptions"  id="inlineRadio1" value="option1"> 总代理
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 代理商
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 商户
+			</label>
+		</div>
+		<div class="box">
+			<div class="choose hide">
+				<label class="z_title hide">选择所属总代:</label>
+				<label class="d_title hide">选择所属代理:</label>	
+				<select class="form-control z_all">
+				  <option selected style="display:none">选择所属总代</option>	
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+				</select>
+				<select class="form-control d_all hide">
+				  <option selected style="display:none">选择代理</option>	
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+				</select>
+			</div>		
+		</div>
+		<!-- 下拉框	 -->
+		<div class="choose1">
+			<label class="any_title">所属区域:</label>	
+			<select class="form-control any_all">
+			  <option selected style="display:none">选择省份</option>	
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+			</select>
+			<select class="form-control any_all">
+			  <option selected style="display:none">选择市区</option>	
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+			</select>	
+		</div>
+		<!-- 单选 文本框-->
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title control-label"><i style="color:red;">＊</i>经销商名称:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			    </div>
+			    <div class="s_box">
+			    	<label class="l_title">属性：</label>
+					<label class="radio-inline">
+					  <input type="radio" name="inlineRadioOptions"   value="company"> 企业
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="inlineRadioOptions"  value="person"> 个人
+					</label>
+			    </div>
+			</div>	
+		</div>	
+		<!-- 手记号 -->
+		<div class="choose1 phoneNum">
+			<label for="inputEmail3" class="any_title control-label"><i style="color:red;">＊</i>手机号:</label>
+		    <div class="col-sm-5 name">
+		      <input type="number" class="form-control"  placeholder="请输入手机号，用户登录商户中心">
+		    </div>
+		</div>
+		<h4>公司信息:</h4>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title control-label">公司全称:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="输入公司名称">
+			    </div>
+			</div> 
+		</div>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title control-label">法人代表名称:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			    </div>
+			</div> 
+		</div>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title control-label">工商营业执照号:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="输入商业执照号并上传商业执照照片">
+			      <input style="padding-top:20px" type="file" name="" multiple="multiple">
+			    </div>
+			</div> 
+		</div>
+		<div class="btn_s1">
+			<div class="btn1" onclick="next()">下一步</div>
+		</div>
+	</div>
+	<div class="step2 hide">
+		<h4>签约人信息：</h4>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title2 control-label"><i style="color:red;">＊</i>签约人姓名:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			    </div>
+			</div> 
+		</div>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title2 control-label"><i style="color:red;">＊</i>联系方式:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			    </div>
+			</div> 
+		</div>
+		<h4>分润比例设置:</h4>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title2 control-label"><i style="color:red;">＊</i>彩票分润比例设置:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			    </div>
+			</div> 
+		</div>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title2 control-label"><i style="color:red;">＊</i>游戏分润比例设置:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			    </div>
+			</div> 
+		</div>
+		<h4>结算卡信息:</h4>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title2 control-label"><i style="color:red;">＊</i>开卡人名称:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			    </div>
+			</div> 
+		</div>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title2 control-label"><i style="color:red;">＊</i>开户行:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			    </div>
+			</div> 
+		</div>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title2 control-label"><i style="color:red;">＊</i>所在支行:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			    </div>
+			</div> 
+		</div>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title2 control-label"><i style="color:red;">＊</i>银行卡号:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			    </div>
+			</div> 
+		</div>
+		<h4>合同信息:</h4>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title2 control-label"><i style="color:red;">＊</i>签约合同:</label>
+			    <div class="col-sm-5 name">
+			      <input type="text" class="form-control"  placeholder="">
+			      <input style="padding:20px 0" type="file" name="abc" class="compact"  multiple="multiple" >
+			    </div>
+			</div> 
+		</div>
+		<div class="choose1">
+			<div class="form-group">
+			    <label for="inputEmail3" class="any_title2 control-label"><i style="color:red;">＊</i>备注信息:</label>
+			    <div class="col-sm-5 name">
+			      <!-- <textarea type="text" class="form-control" id="inputEmail3" placeholder=""> -->
+			      	<textarea class="form-control"></textarea>
+			    </div>
+			</div> 
+		</div>
+		<div class="btn_s2">
+			<div class="btn2" onclick="pre()">上一步</div>
+			<div class="btn3" onclick="submit()">确认提交</div>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$('input[type=radio][name=inlineRadioOptions]').change(function() {
+        if (this.value == 'option1') {
+            // alert("总代理");
+            $('.choose').addClass('hide')
+            $('.choose').removeClass('show')
+        }
+        else if (this.value == 'option2') {
+            // alert("代理");
+            $('.choose').addClass('show')
+            $('.choose').removeClass('hide')
+            // 标题
+            $('.z_title').addClass('show')
+            $('.z_title').removeClass('hide')
+            $('.d_title').addClass('hide')
+            $('.d_title').removeClass('show')
+            // 下拉框
+            $('.d_all').addClass('hide')
+            $('.d_all').removeClass('show')
+        }else if(this.value == 'option3'){
+        	$('.choose').addClass('show')
+            $('.choose').removeClass('hide')
+            // 标题
+            $('.d_title').addClass('show')
+            $('.d_title').removeClass('hide')
+            $('.z_title').addClass('hide')
+            $('.z_title').removeClass('show')
+            // 下拉框
+            $('.d_all').addClass('show')
+            $('.d_all').removeClass('hide')
+        }
+    });	
+    function next(){
+    	$('.step1').addClass('hide');
+    	$('.step1').removeClass('show');    	
+    	$('.step2').addClass('show');
+    	$('.step2').removeClass('hide');
+
+
+    }
+    function pre(){
+    	// alert('点了')
+    	$('.step1').addClass('show');
+    	$('.step1').removeClass('hide');
+    	$('.step2').addClass('hide')
+    	$('.step2').removeClass('show')    	
+   	
+    }
+    function submit(){
+    	alert('提交了')
+    	console.log($(".compact"))
+    }
+</script>
+</html>
